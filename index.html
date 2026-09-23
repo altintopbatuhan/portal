@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=240, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=120, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Portal</title>
   <style>
     * {
@@ -13,46 +13,46 @@
       text-size-adjust: none !important;
     }
     html, body {
-      width: 240px;
-      max-width: 240px;
+      width: 120px;
+      max-width: 120px;
       background: #000;
       color: #fff;
-      font-family: Arial, sans-serif;
-      font-size: 8px;
-      padding: 2px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 7.5px;
+      padding: 1px;
       overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 2px 0;
+      padding: 1px 0;
       border-bottom: 1px solid #222;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     h1 {
-      font-size: 9px;
+      font-size: 8px;
       color: #00e5ff;
-      letter-spacing: 0.3px;
+      letter-spacing: -0.2px;
     }
     #searchBox {
       width: 100%;
-      height: 18px;
-      padding: 1px 3px;
+      height: 15px;
+      padding: 1px 2px;
       background: #181818;
       border: 1px solid #333;
       border-radius: 2px;
       color: #fff;
-      font-size: 8px;
-      margin-bottom: 3px;
+      font-size: 7.5px;
+      margin-bottom: 2px;
     }
     details {
-      background: #0f0f0f;
+      background: #0d0d0d;
       border: 1px solid #222;
       border-radius: 2px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     summary {
-      padding: 3px 4px;
-      font-size: 8px;
+      padding: 2px;
+      font-size: 7.5px;
       font-weight: bold;
       color: #ffb703;
       cursor: pointer;
@@ -66,35 +66,35 @@
       display: none;
     }
     .badge {
-      font-size: 7px;
+      font-size: 6.5px;
       background: #252525;
-      padding: 0 3px;
-      border-radius: 2px;
+      padding: 0 2px;
+      border-radius: 1px;
       color: #888;
     }
     .list {
       display: flex;
       flex-direction: column;
       gap: 1px;
-      padding: 2px;
+      padding: 1px;
     }
     a {
       display: block;
       width: 100%;
-      height: 16px;
-      line-height: 14px;
-      padding: 0 4px;
+      height: 13px;
+      line-height: 12px;
+      padding: 0 2px;
       background: #181818;
-      color: #ccc;
+      color: #ddd;
       text-decoration: none;
-      font-size: 8px;
-      border-radius: 2px;
-      border: 1px solid #242424;
+      font-size: 7.5px;
+      border-radius: 1px;
+      border: 1px solid #222;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    /* Tuş odağı: Net sarı zemin, siyah metin */
+    /* Tuş odağı */
     a:focus, summary:focus, #searchBox:focus {
       background: #ffea00 !important;
       color: #000 !important;
@@ -107,58 +107,58 @@
 <body>
 
   <header>
-    <h1>HMD 101 PORTAL (240x320)</h1>
+    <h1>PORTAL (120x160)</h1>
   </header>
 
   <input type="text" id="searchBox" placeholder="Ara..." onkeyup="filterList()" />
 
   <!-- 1. SOSYAL & VİDEO -->
   <details open>
-    <summary>1. Sosyal & Video <span class="badge">10</span></summary>
+    <summary>1. Sosyal/Video <span class="badge">10</span></summary>
     <div class="list">
-      <a href="https://www.picuki.com/tag/reels">Instagram Reels (Açık)</a>
-      <a href="https://m.instagram.com/">Instagram Mobil</a>
-      <a href="https://m.youtube.com/shorts">YouTube Shorts</a>
-      <a href="https://m.youtube.com/">YouTube Mobil</a>
-      <a href="https://m.youtube.com/feed/trending">YouTube Trendler</a>
-      <a href="https://music.youtube.com/">YouTube Müzik</a>
-      <a href="https://m.tiktok.com/">TikTok Mobil</a>
-      <a href="https://mobile.x.com/">X (Twitter Mobil)</a>
-      <a href="https://web.telegram.org/k/">Telegram Web K</a>
-      <a href="https://news.google.com/">Google Haberler</a>
+      <a href="https://www.picuki.com/tag/reels">Insta Reels</a>
+      <a href="https://m.instagram.com/">Instagram</a>
+      <a href="https://m.youtube.com/shorts">YT Shorts</a>
+      <a href="https://m.youtube.com/">YouTube</a>
+      <a href="https://m.youtube.com/feed/trending">YT Trend</a>
+      <a href="https://music.youtube.com/">YT Müzik</a>
+      <a href="https://m.tiktok.com/">TikTok</a>
+      <a href="https://mobile.x.com/">X (Twitter)</a>
+      <a href="https://web.telegram.org/k/">Telegram</a>
+      <a href="https://news.google.com/">G. Haberler</a>
     </div>
   </details>
 
   <!-- 2. YAPAY ZEKA & ARAMA -->
   <details open>
-    <summary>2. Yapay Zeka & Arama <span class="badge">10</span></summary>
+    <summary>2. Yapay Zeka <span class="badge">10</span></summary>
     <div class="list">
-      <a href="https://www.google.com/m">1. Google Mobil</a>
-      <a href="https://gemini.google.com/app">2. Google Gemini</a>
-      <a href="https://chatgpt.com/">3. ChatGPT Web</a>
-      <a href="https://translate.google.com/m">4. Google Çeviri Mobil</a>
-      <a href="https://claude.ai/">5. Claude AI</a>
-      <a href="https://copilot.microsoft.com/">6. Microsoft Copilot</a>
+      <a href="https://www.google.com/m">1. Google</a>
+      <a href="https://gemini.google.com/app">2. Gemini</a>
+      <a href="https://chatgpt.com/">3. ChatGPT</a>
+      <a href="https://translate.google.com/m">4. Çeviri</a>
+      <a href="https://claude.ai/">5. Claude</a>
+      <a href="https://copilot.microsoft.com/">6. Copilot</a>
       <a href="https://poe.com/">7. Poe AI</a>
-      <a href="https://chat.mistral.ai/">8. Mistral AI</a>
-      <a href="https://m.wolframalpha.com/">9. WolframAlpha Mobil</a>
-      <a href="https://www.blackbox.ai/">10. Blackbox AI</a>
+      <a href="https://chat.mistral.ai/">8. Mistral</a>
+      <a href="https://m.wolframalpha.com/">9. Wolfram</a>
+      <a href="https://www.blackbox.ai/">10. Blackbox</a>
     </div>
   </details>
 
   <!-- 3. RESMİ, DİNİ & HABER -->
   <details open>
-    <summary>3. Resmi, Dini & Haber <span class="badge">10</span></summary>
+    <summary>3. Resmi/Haber <span class="badge">10</span></summary>
     <div class="list">
-      <a href="https://namazvakitleri.diyanet.gov.tr/">Diyanet Namaz Vakitleri</a>
-      <a href="https://giris.turkiye.gov.tr/">E-Devlet Kapısı Mobil</a>
-      <a href="https://www.aa.com.tr/tr">Anadolu Ajansı (AA)</a>
-      <a href="https://www.trthaber.com/">TRT Haber Mobil</a>
-      <a href="https://www.bbc.com/turkce">BBC Türkçe Mobil</a>
-      <a href="http://www.koeri.boun.edu.tr/scripts/lst0.asp">Kandilli Son Depremler</a>
-      <a href="https://www.mgm.gov.tr/">MGM Hava Durumu</a>
-      <a href="https://m.doviz.com/">Döviz & Altın Fiyatları</a>
-      <a href="https://enabiz.gov.tr/">e-Nabız Mobil</a>
+      <a href="https://namazvakitleri.diyanet.gov.tr/">Namaz Vakti</a>
+      <a href="https://giris.turkiye.gov.tr/">e-Devlet</a>
+      <a href="https://www.aa.com.tr/tr">AA Haber</a>
+      <a href="https://www.trthaber.com/">TRT Haber</a>
+      <a href="https://www.bbc.com/turkce">BBC Türkçe</a>
+      <a href="http://www.koeri.boun.edu.tr/scripts/lst0.asp">Depremler</a>
+      <a href="https://www.mgm.gov.tr/">Hava Durumu</a>
+      <a href="https://m.doviz.com/">Döviz/Altın</a>
+      <a href="https://enabiz.gov.tr/">e-Nabız</a>
       <a href="https://mhrs.gov.tr/">MHRS Randevu</a>
     </div>
   </details>
