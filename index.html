@@ -2,13 +2,14 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Portal 100 Mobile</title>
+  <meta name="viewport" content="width=240, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Portal Mobil</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: sans-serif;
     }
     body {
       width: 100%;
@@ -16,16 +17,15 @@
       margin: 0 auto;
       background: #000;
       color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-size: 12px;
-      padding: 6px;
+      font-size: 11px;
+      padding: 6px 4px;
       overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 6px 0;
-      border-bottom: 1px solid #333;
-      margin-bottom: 8px;
+      padding: 4px 0 8px 0;
+      border-bottom: 1px solid #222;
+      margin-bottom: 6px;
     }
     h1 {
       font-size: 13px;
@@ -34,48 +34,42 @@
     }
     #searchBox {
       width: 100%;
-      padding: 6px 8px;
+      padding: 6px;
       background: #1c1c1e;
-      border: 1px solid #444;
+      border: 1px solid #333;
       border-radius: 4px;
       color: #fff;
-      font-size: 12px;
+      font-size: 11px;
       margin-bottom: 8px;
     }
     details {
       background: #121212;
-      border: 1px solid #2a2a2a;
-      border-radius: 5px;
+      border: 1px solid #262626;
+      border-radius: 4px;
       margin-bottom: 6px;
       overflow: hidden;
     }
     summary {
-      padding: 8px 6px;
+      padding: 7px 6px;
       font-size: 11px;
       font-weight: bold;
       color: #ffb703;
       cursor: pointer;
-      list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: #1a1a1a;
-      border-bottom: 1px solid transparent;
-    }
-    details[open] summary {
-      border-bottom-color: #2a2a2a;
+      list-style: none;
     }
     summary::-webkit-details-marker {
       display: none;
     }
-    summary::after {
-      content: "▼";
+    .badge {
       font-size: 9px;
-      color: #888;
-    }
-    details[open] summary::after {
-      content: "▲";
-      color: #ffb703;
+      background: #2a2a2a;
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: #aaa;
     }
     .list {
       display: flex;
@@ -87,16 +81,17 @@
       display: block;
       width: 100%;
       padding: 7px 6px;
-      background: #1e1e1e;
-      color: #e0e0e0;
+      background: #1c1c1e;
+      color: #e5e5e5;
       text-decoration: none;
       font-size: 11px;
-      border-radius: 4px;
-      border: 1px solid #2d2d2d;
+      border-radius: 3px;
+      border: 1px solid #2c2c2e;
       white-space: normal;
       word-break: break-word;
       line-height: 1.25;
     }
+    /* Tuş takımıyla gezinirken yanan odak rengi */
     a:focus, summary:focus, #searchBox:focus {
       background: #ffea00 !important;
       color: #000 !important;
@@ -104,212 +99,74 @@
       border-color: #fff !important;
       outline: none;
     }
-    .badge {
-      font-size: 9px;
-      background: #333;
-      padding: 1px 4px;
-      border-radius: 3px;
-      color: #aaa;
-      margin-left: 4px;
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>PORTAL • 100 MOBİL</h1>
+    <h1>HMD PORTAL • MOBİL</h1>
   </header>
 
-  <input type="text" id="searchBox" placeholder="Ara (örn: haber, skor)..." onkeyup="filterSites()" />
+  <input type="text" id="searchBox" placeholder="Site ara (örn: VK, Gemini)..." onkeyup="filterList()" />
 
-  <!-- 1. SOSYAL & SOHBET (10) -->
+  <!-- 1. SOSYAL & MEDYA (10 SİTE) -->
   <details open>
-    <summary>1. Sosyal & Sohbet <span class="badge">10</span></summary>
+    <summary>1. Sosyal & Video <span class="badge">10</span></summary>
     <div class="list">
-      <a href="https://web.telegram.org/k/">Telegram Web K (Mobil)</a>
+      <a href="https://m.instagram.com/">Instagram Mobil</a>
+      <a href="https://m.youtube.com/">YouTube Mobil</a>
+      <a href="https://m.youtube.com/shorts">YouTube Shorts</a>
+      <a href="https://m.facebook.com/">Facebook Mobil</a>
       <a href="https://m.tiktok.com/">TikTok Mobil</a>
       <a href="https://mobile.x.com/">X (Twitter Mobil)</a>
-      <a href="https://old.reddit.com/">Reddit (Ultra Hafif)</a>
-      <a href="https://m.facebook.com/">Facebook Mobil</a>
-      <a href="https://m.pinterest.com/">Pinterest Mobil</a>
-      <a href="https://m.tumblr.com/">Tumblr Mobil</a>
-      <a href="https://www.threads.net/">Threads Mobil</a>
-      <a href="https://bsky.app/">Bluesky Web</a>
-      <a href="https://www.linkedin.com/feed/">LinkedIn Mobil</a>
-    </div>
-  </details>
-
-  <!-- 2. VİDEO & DİZİ / FİLM (10) -->
-  <details>
-    <summary>2. Video & Dizi/Film <span class="badge">10</span></summary>
-    <div class="list">
-      <a href="https://m.youtube.com/shorts">YouTube Shorts Mobil</a>
-      <a href="https://m.youtube.com/">YouTube Mobil</a>
-      <a href="https://puhutv.com/">PuhuTV Mobil</a>
-      <a href="https://www.trtizle.com/">TRT İzle Canlı/Dizi</a>
-      <a href="https://www.tabii.com/">Tabii TRT Mobil</a>
+      <a href="https://web.telegram.org/k/">Telegram Web K</a>
+      <a href="https://m.vk.com/">VK Mobil</a>
       <a href="https://m.twitch.tv/">Twitch Mobil</a>
-      <a href="https://www.dailymotion.com/">Dailymotion Mobil</a>
-      <a href="https://vimeo.com/watch">Vimeo Mobil</a>
-      <a href="https://imginn.com/">Imginn Video İzle</a>
-      <a href="https://www.picuki.com/tag/reels">Picuki Reels Keşfet</a>
+      <a href="https://m.pinterest.com/">Pinterest Mobil</a>
     </div>
   </details>
 
-  <!-- 3. MÜZİK & CANLI RADYO (10) -->
-  <details>
-    <summary>3. Müzik & Radyo <span class="badge">10</span></summary>
+  <!-- 2. YAPAY ZEKA & ARAMA (10 SİTE) -->
+  <details open>
+    <summary>2. Yapay Zeka & Arama <span class="badge">10</span></summary>
     <div class="list">
-      <a href="https://m.soundcloud.com/">SoundCloud Mobil</a>
-      <a href="https://music.youtube.com/">YouTube Music</a>
-      <a href="https://www.radyokule.com/">Radyo Kule (Tüm Radyolar)</a>
-      <a href="https://karnaval.com/">Karnaval Radyoları</a>
-      <a href="https://www.powerapp.com.tr/">PowerApp Radyolar</a>
-      <a href="https://m.kralmuzik.com.tr/">Kral FM Mobil</a>
-      <a href="https://www.trtradyo.com.tr/">TRT Radyoları</a>
-      <a href="https://tunein.com/radio/">TuneIn Mobil Radyo</a>
-      <a href="https://fizy.com/">Fizy Web</a>
-      <a href="https://www.canliradyodinle.fm/">Canlı Radyo Dinle</a>
+      <a href="https://www.google.com/m">1. Google Mobil</a>
+      <a href="https://gemini.google.com/app">2. Google Gemini</a>
+      <a href="https://chatgpt.com/">3. ChatGPT Web</a>
+      <a href="https://translate.google.com/m">4. Google Çeviri Mobil</a>
+      <a href="https://claude.ai/">5. Claude AI</a>
+      <a href="https://copilot.microsoft.com/">6. Microsoft Copilot</a>
+      <a href="https://poe.com/">7. Poe AI (Çoklu Bot)</a>
+      <a href="https://chat.mistral.ai/">8. Mistral AI</a>
+      <a href="https://m.wolframalpha.com/">9. WolframAlpha Mobil</a>
+      <a href="https://www.blackbox.ai/">10. Blackbox AI</a>
     </div>
   </details>
 
-  <!-- 4. SPOR & CANLI SKOR (10) -->
-  <details>
-    <summary>4. Spor & Canlı Skor <span class="badge">10</span></summary>
-    <div class="list">
-      <a href="https://www.flashscore.mobi/">Flashscore Mobi (Hızlı Skor)</a>
-      <a href="https://m.mackolik.com/">Mackolik Mobil</a>
-      <a href="https://m.sahadan.com/">Sahadan Mobil</a>
-      <a href="https://m.sofascore.com/">Sofascore Mobil</a>
-      <a href="https://m.sporx.com/">Sporx Mobil</a>
-      <a href="https://m.fotomac.com.tr/">Fotomaç Mobil</a>
-      <a href="https://m.fanatik.com.tr/">Fanatik Mobil</a>
-      <a href="https://www.transfermarkt.com.tr/">Transfermarkt Mobil</a>
-      <a href="https://beinsports.com.tr/">beIN Sports Mobil</a>
-      <a href="https://www.tff.org/">TFF Resmi Mobil</a>
-    </div>
-  </details>
-
-  <!-- 5. HABER & GÜNDEM (10) -->
-  <details>
-    <summary>5. Haber & Gündem <span class="badge">10</span></summary>
-    <div class="list">
-      <a href="https://m.ensonhaber.com/">Ensonhaber Mobil</a>
-      <a href="https://www.bbc.com/turkce">BBC Türkçe Mobil</a>
-      <a href="https://m.haberler.com/">Haberler.com Mobil</a>
-      <a href="https://m.ntv.com.tr/">NTV Mobil</a>
-      <a href="https://www.sozcu.com.tr/">Sözcü Mobil</a>
-      <a href="https://m.hurriyet.com.tr/">Hürriyet Mobil</a>
-      <a href="https://www.trthaber.com/">TRT Haber Mobil</a>
-      <a href="https://www.aa.com.tr/tr">Anadolu Ajansı</a>
-      <a href="https://t24.com.tr/">T24 Bağımsız Haber</a>
-      <a href="https://m.memurlar.net/">Memurlar.net Mobil</a>
-    </div>
-  </details>
-
-  <!-- 6. TEKNOLOJİ & FORUM (10) -->
-  <details>
-    <summary>6. Teknoloji & Forum <span class="badge">10</span></summary>
-    <div class="list">
-      <a href="https://mobil.donanimhaber.com/">DonanımHaber Mobil Forum</a>
-      <a href="https://www.webtekno.com/">Webtekno Mobil</a>
-      <a href="https://shiftdelete.net/">ShiftDelete Mobil</a>
-      <a href="https://www.technopat.net/sosyal/">Technopat Sosyal Forum</a>
-      <a href="https://www.chip.com.tr/">Chip Online Mobil</a>
-      <a href="https://www.log.com.tr/">LOG Teknoloji Mobil</a>
-      <a href="https://webrazzi.com/">Webrazzi Mobil</a>
-      <a href="https://www.r10.net/">R10.net Webmaster Forum</a>
-      <a href="https://github.com/">GitHub Mobil Görünüm</a>
-      <a href="https://stackoverflow.com/">Stack Overflow</a>
-    </div>
-  </details>
-
-  <!-- 7. YAPAY ZEKA & ARAMA (10) -->
-  <details>
-    <summary>7. Yapay Zeka & Arama <span class="badge">10</span></summary>
-    <div class="list">
-      <a href="https://chatgpt.com/">ChatGPT Mobil Web</a>
-      <a href="https://www.google.com/m">Google Mobil Arama</a>
-      <a href="https://translate.google.com/m">Google Çeviri Mobil</a>
-      <a href="https://lite.duckduckgo.com/lite/">DuckDuckGo Lite (Sıfır Yük)</a>
-      <a href="https://ya.ru/">Yandex Hızlı Mobil Arama</a>
-      <a href="https://www.deepl.com/translator">DeepL Çeviri</a>
-      <a href="https://www.perplexity.ai/">Perplexity Yapay Zeka</a>
-      <a href="https://m.bing.com/">Microsoft Bing Mobil</a>
-      <a href="https://m.wolframalpha.com/">WolframAlpha Hesaplama</a>
-      <a href="https://www.ecosia.org/">Ecosia Çevreci Arama</a>
-    </div>
-  </details>
-
-  <!-- 8. SÖZLÜK, TOPLULUK & BİLGİ (10) -->
-  <details>
-    <summary>8. Sözlük & Bilgi <span class="badge">10</span></summary>
-    <div class="list">
-      <a href="https://eksisozluk.com/">Ekşi Sözlük Mobil</a>
-      <a href="https://m.incisozluk.com.tr/">İnci Sözlük Mobil</a>
-      <a href="https://m.uludagsozluk.com/">Uludağ Sözlük Mobil</a>
-      <a href="https://m.kizlarsoruyor.com/">KızlarSoruyor Mobil</a>
-      <a href="https://onedio.com/">Onedio Mobil</a>
-      <a href="https://tr.m.wikipedia.org/">Vikipedi Türkçe Mobil</a>
-      <a href="https://eksiseyler.com/">Ekşi Şeyler Mobil</a>
-      <a href="https://evrimagaci.org/">Evrim Ağacı Bilim</a>
-      <a href="https://sozluk.gov.tr/">TDK Güncel Sözlük</a>
-      <a href="https://tr.m.wiktionary.org/">Vikisözlük Kelimeler</a>
-    </div>
-  </details>
-
-  <!-- 9. RESMİ, DİNİ & ARAÇLAR (10) -->
-  <details>
-    <summary>9. Resmi, Dini & Araçlar <span class="badge">10</span></summary>
+  <!-- 3. RESMİ, DİNİ & HABER (10 SİTE) -->
+  <details open>
+    <summary>3. Resmi, Dini & Haber <span class="badge">10</span></summary>
     <div class="list">
       <a href="https://namazvakitleri.diyanet.gov.tr/">Diyanet Namaz Vakitleri</a>
+      <a href="https://giris.turkiye.gov.tr/">E-Devlet Kapısı Mobil</a>
+      <a href="https://www.aa.com.tr/tr">Anadolu Ajansı (AA)</a>
+      <a href="https://www.trthaber.com/">TRT Haber Mobil</a>
+      <a href="https://www.bbc.com/turkce">BBC Türkçe Mobil</a>
       <a href="http://www.koeri.boun.edu.tr/scripts/lst0.asp">Kandilli Son Depremler</a>
-      <a href="https://m.doviz.com/">Döviz & Altın Fiyatları</a>
       <a href="https://www.mgm.gov.tr/">MGM Canlı Hava Durumu</a>
-      <a href="https://giris.turkiye.gov.tr/">E-Devlet Kapısı Giriş</a>
-      <a href="https://fast.com/">Fast.com İnternet Hız Testi</a>
-      <a href="https://gonderitakip.ptt.gov.tr/">PTT Kargo Takip</a>
-      <a href="https://www.kgm.gov.tr/">Karayolları Yol Durumu</a>
-      <a href="https://vclock.com/">Online Saat & Kronometre</a>
-      <a href="https://www.online-calculator.com/">Hesap Makinesi Online</a>
-    </div>
-  </details>
-
-  <!-- 10. MİNİ OYUNLAR (Vakit Geçirme) (10) -->
-  <details>
-    <summary>10. Mini Oyunlar <span class="badge">10</span></summary>
-    <div class="list">
-      <a href="https://play2048.co/">2048 Sayı Oyunu</a>
-      <a href="https://www.google.com/search?q=snake+game">Google Yılan Oyunu</a>
-      <a href="https://lichess.org/">Lichess Online Satranç</a>
-      <a href="https://sudoku.com/">Sudoku Oyna</a>
-      <a href="https://fatihhayrioglu.com/wordle-tr/">Wordle Türkçe Kelime</a>
-      <a href="https://tetris.com/play-tetris">Tetris Oyna</a>
-      <a href="https://playtictactoe.org/">XOX (Tic Tac Toe)</a>
-      <a href="https://minesweeperonline.com/">Mayın Tarlası</a>
-      <a href="https://freepacman.org/">Pacman Nostalji</a>
-      <a href="https://opentdb.com/">Genel Kültür Bilgi Testi</a>
+      <a href="https://m.doviz.com/">Döviz & Altın Fiyatları</a>
+      <a href="https://enabiz.gov.tr/">e-Nabız Mobil</a>
+      <a href="https://mhrs.gov.tr/">MHRS Randevu</a>
     </div>
   </details>
 
   <script>
-    function filterSites() {
-      const input = document.getElementById('searchBox').value.toLowerCase();
+    function filterList() {
+      const q = document.getElementById('searchBox').value.toLowerCase();
       const links = document.querySelectorAll('.list a');
-      const details = document.querySelectorAll('details');
-
-      links.forEach(link => {
-        const text = link.innerText.toLowerCase();
-        if (text.includes(input)) {
-          link.style.display = "block";
-        } else {
-          link.style.display = "none";
-        }
+      links.forEach(el => {
+        el.style.display = el.innerText.toLowerCase().includes(q) ? 'block' : 'none';
       });
-
-      if (input.length > 0) {
-        details.forEach(d => d.open = true);
-      }
     }
   </script>
 
