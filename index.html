@@ -107,11 +107,42 @@
     <h1>HMD PORTAL • MOBİL</h1>
   </header>
 
-  <input type="text" id="searchBox" placeholder="Site ara (örn: VK, Gemini)..." onkeyup="filterList()" />
+  <input type="text" id="searchBox" placeholder="Site ara (örn: Dizi, Film, VK)..." onkeyup="filterList()" />
 
-  <!-- 1. SOSYAL & MEDYA (10 SİTE) -->
+  <!-- 1. FİLM & DİZİ İZLE (24 SİTE) -->
   <details open>
-    <summary>1. Sosyal & Video <span class="badge">10</span></summary>
+    <summary>1. Film & Dizi İzle <span class="badge">24</span></summary>
+    <div class="list">
+      <a href="https://dizimag.eu/">Dizimag</a>
+      <a href="https://yabancidizi.news/">Yabancı Dizi</a>
+      <a href="https://www.ddizi.im/">DDizi</a>
+      <a href="https://filmizlex.org">Filmizlex</a>
+      <a href="https://dizitube.tv/">Dizitube</a>
+      <a href="https://dizist.live/">Dizist</a>
+      <a href="https://filmmakinesi.to/filmler-1/">Film Makinesi</a>
+      <a href="https://sonhdfilm.net/">Son HD Film</a>
+      <a href="https://dizipalorjinal9.com/filmler">Dizipal (Filmler)</a>
+      <a href="https://www.filmifullizle.mx/">Filmi Full İzle</a>
+      <a href="https://filmizlehell.net/">Filmizle Hell</a>
+      <a href="https://720izle.net/">720izle</a>
+      <a href="https://sfilmizle.com/">S Film İzle</a>
+      <a href="https://cepfilmizle.com/">Cep Film İzle (Hafif)</a>
+      <a href="https://www.fullhdfilmizle.fit/page/3/">Full HD Film İzle</a>
+      <a href="https://www.fixfullfilmizle.net/">Fix Full Film İzle</a>
+      <a href="https://www.filmizlemesitesi.nl/">Film İzleme Sitesi</a>
+      <a href="https://sinezy.to/">Sinezy</a>
+      <a href="https://www.zipfilmizle.org/">Zip Film İzle</a>
+      <a href="https://www.hdfilmcehennemi2.biz/">HD Film Cehennemi</a>
+      <a href="https://cfilmizle.com/">C Film İzle</a>
+      <a href="https://www.setfilmizle.ltd/">Set Film İzle</a>
+      <a href="https://dizisol.com/filmler">DiziSol (Filmler)</a>
+      <a href="https://dizisol.com/diziler">DiziSol (Diziler)</a>
+    </div>
+  </details>
+
+  <!-- 2. SOSYAL & VİDEO (10 SİTE) -->
+  <details>
+    <summary>2. Sosyal & Video <span class="badge">10</span></summary>
     <div class="list">
       <a href="https://m.instagram.com/">Instagram Mobil</a>
       <a href="https://m.youtube.com/">YouTube Mobil</a>
@@ -126,9 +157,9 @@
     </div>
   </details>
 
-  <!-- 2. YAPAY ZEKA & ARAMA (10 SİTE) -->
-  <details open>
-    <summary>2. Yapay Zeka & Arama <span class="badge">10</span></summary>
+  <!-- 3. YAPAY ZEKA & ARAMA (10 SİTE) -->
+  <details>
+    <summary>3. Yapay Zeka & Arama <span class="badge">10</span></summary>
     <div class="list">
       <a href="https://www.google.com/m">1. Google Mobil</a>
       <a href="https://gemini.google.com/app">2. Google Gemini</a>
@@ -143,9 +174,9 @@
     </div>
   </details>
 
-  <!-- 3. RESMİ, DİNİ & HABER (10 SİTE) -->
-  <details open>
-    <summary>3. Resmi, Dini & Haber <span class="badge">10</span></summary>
+  <!-- 4. RESMİ, DİNİ & HABER (10 SİTE) -->
+  <details>
+    <summary>4. Resmi, Dini & Haber <span class="badge">10</span></summary>
     <div class="list">
       <a href="https://namazvakitleri.diyanet.gov.tr/">Diyanet Namaz Vakitleri</a>
       <a href="https://giris.turkiye.gov.tr/">E-Devlet Kapısı Mobil</a>
@@ -164,9 +195,15 @@
     function filterList() {
       const q = document.getElementById('searchBox').value.toLowerCase();
       const links = document.querySelectorAll('.list a');
+      const details = document.querySelectorAll('details');
+
       links.forEach(el => {
         el.style.display = el.innerText.toLowerCase().includes(q) ? 'block' : 'none';
       });
+
+      if (q.length > 0) {
+        details.forEach(d => d.open = true);
+      }
     }
   </script>
 
