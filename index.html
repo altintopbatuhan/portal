@@ -9,89 +9,92 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-text-size-adjust: none !important;
+      text-size-adjust: none !important;
     }
-    body {
-      width: 100%;
+    html, body {
+      width: 240px;
+      max-width: 240px;
       background: #000;
       color: #fff;
-      font-size: 10px;
-      padding: 3px;
+      font-family: Arial, sans-serif;
+      font-size: 8px;
+      padding: 2px;
       overflow-x: hidden;
     }
     header {
       text-align: center;
-      padding: 2px 0 4px 0;
+      padding: 2px 0;
       border-bottom: 1px solid #222;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     h1 {
-      font-size: 11px;
+      font-size: 9px;
       color: #00e5ff;
-      font-weight: bold;
+      letter-spacing: 0.3px;
     }
     #searchBox {
       width: 100%;
-      height: 24px;
-      padding: 2px 5px;
-      background: #1a1a1a;
+      height: 18px;
+      padding: 1px 3px;
+      background: #181818;
       border: 1px solid #333;
-      border-radius: 3px;
+      border-radius: 2px;
       color: #fff;
-      font-size: 10px;
-      margin-bottom: 5px;
+      font-size: 8px;
+      margin-bottom: 3px;
     }
     details {
-      background: #111;
+      background: #0f0f0f;
       border: 1px solid #222;
-      border-radius: 3px;
-      margin-bottom: 4px;
-      overflow: hidden;
+      border-radius: 2px;
+      margin-bottom: 3px;
     }
     summary {
-      padding: 5px 4px;
-      font-size: 10px;
+      padding: 3px 4px;
+      font-size: 8px;
       font-weight: bold;
       color: #ffb703;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #161616;
+      background: #141414;
       list-style: none;
     }
     summary::-webkit-details-marker {
       display: none;
     }
     .badge {
-      font-size: 8px;
-      background: #262626;
-      padding: 1px 4px;
+      font-size: 7px;
+      background: #252525;
+      padding: 0 3px;
       border-radius: 2px;
       color: #888;
     }
     .list {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 1px;
       padding: 2px;
     }
     a {
       display: block;
       width: 100%;
-      padding: 4px 5px;
+      height: 16px;
+      line-height: 14px;
+      padding: 0 4px;
       background: #181818;
-      color: #ddd;
+      color: #ccc;
       text-decoration: none;
-      font-size: 10px;
+      font-size: 8px;
       border-radius: 2px;
-      border: 1px solid #252525;
+      border: 1px solid #242424;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      line-height: 1.2;
     }
-    /* Tuş takımı odağı */
+    /* Tuş odağı: Net sarı zemin, siyah metin */
     a:focus, summary:focus, #searchBox:focus {
       background: #ffea00 !important;
       color: #000 !important;
@@ -104,7 +107,7 @@
 <body>
 
   <header>
-    <h1>HMD PORTAL</h1>
+    <h1>HMD 101 PORTAL (240x320)</h1>
   </header>
 
   <input type="text" id="searchBox" placeholder="Ara..." onkeyup="filterList()" />
@@ -113,16 +116,16 @@
   <details open>
     <summary>1. Sosyal & Video <span class="badge">10</span></summary>
     <div class="list">
-      <a href="https://www.picuki.com/tag/reels">Instagram Reels (Girişsiz)</a>
+      <a href="https://www.picuki.com/tag/reels">Instagram Reels (Açık)</a>
       <a href="https://m.instagram.com/">Instagram Mobil</a>
       <a href="https://m.youtube.com/shorts">YouTube Shorts</a>
       <a href="https://m.youtube.com/">YouTube Mobil</a>
       <a href="https://m.youtube.com/feed/trending">YouTube Trendler</a>
       <a href="https://music.youtube.com/">YouTube Müzik</a>
       <a href="https://m.tiktok.com/">TikTok Mobil</a>
-      <a href="https://mobile.x.com/">X (Twitter)</a>
+      <a href="https://mobile.x.com/">X (Twitter Mobil)</a>
       <a href="https://web.telegram.org/k/">Telegram Web K</a>
-      <a href="https://news.google.com/">Google Haberler (Gündem)</a>
+      <a href="https://news.google.com/">Google Haberler</a>
     </div>
   </details>
 
@@ -136,7 +139,7 @@
       <a href="https://translate.google.com/m">4. Google Çeviri Mobil</a>
       <a href="https://claude.ai/">5. Claude AI</a>
       <a href="https://copilot.microsoft.com/">6. Microsoft Copilot</a>
-      <a href="https://poe.com/">7. Poe AI (Botlar)</a>
+      <a href="https://poe.com/">7. Poe AI</a>
       <a href="https://chat.mistral.ai/">8. Mistral AI</a>
       <a href="https://m.wolframalpha.com/">9. WolframAlpha Mobil</a>
       <a href="https://www.blackbox.ai/">10. Blackbox AI</a>
