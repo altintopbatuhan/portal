@@ -15,16 +15,19 @@
     html, body {
       width: 120px;
       max-width: 120px;
+      margin: 0;
+      margin-right: auto;
+      padding: 1px;
       background: #000;
       color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 7.5px;
-      padding: 1px;
+      text-align: left;
       overflow-x: hidden;
     }
     header {
-      text-align: center;
-      padding: 1px 0;
+      text-align: left;
+      padding: 1px 0 1px 2px;
       border-bottom: 1px solid #222;
       margin-bottom: 2px;
     }
@@ -32,14 +35,17 @@
       font-size: 8px;
       color: #00e5ff;
       letter-spacing: -0.2px;
+      text-align: left;
     }
     .group {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       gap: 1px;
       margin-bottom: 3px;
       padding-bottom: 2px;
       border-bottom: 1px solid #1a1a1a;
+      width: 100%;
     }
     .group:last-child {
       border-bottom: none;
@@ -51,6 +57,7 @@
       height: 13px;
       line-height: 12px;
       padding: 0 2px;
+      text-align: left;
       background: #181818;
       color: #ddd;
       text-decoration: none;
@@ -93,16 +100,16 @@
 
   <!-- 2. GRUP: YAPAY ZEKA & KİTAP/BİLGİ -->
   <div class="group">
-    <a href="https://www.google.com/m">1. Google</a>
-    <a href="https://gemini.google.com/app">2. Gemini</a>
-    <a href="https://chatgpt.com/">3. ChatGPT</a>
-    <a href="https://translate.google.com/m">4. Çeviri</a>
-    <a href="https://claude.ai/">5. Claude</a>
-    <a href="https://welib-public.org/">6. WeLib (ePub)</a>
-    <a href="https://tr.m.wikipedia.org/">7. Vikipedi</a>
-    <a href="https://annas-archive.org/">8. Anna Archive</a>
-    <a href="https://m.gutenberg.org/">9. Gutenberg</a>
-    <a href="https://tr.m.wikisource.org/">10. Vikikaynak</a>
+    <a href="https://www.google.com/m">Google</a>
+    <a href="https://gemini.google.com/app">Gemini</a>
+    <a href="https://chatgpt.com/">ChatGPT</a>
+    <a href="https://translate.google.com/m">Çeviri</a>
+    <a href="https://claude.ai/">Claude</a>
+    <a href="https://welib-public.org/">WeLib (ePub)</a>
+    <a href="https://tr.m.wikipedia.org/">Vikipedi</a>
+    <a href="https://annas-archive.org/">Anna Archive</a>
+    <a href="https://m.gutenberg.org/">Gutenberg</a>
+    <a href="https://tr.m.wikisource.org/">Vikikaynak</a>
   </div>
 
   <!-- 3. GRUP: RESMİ & HABER -->
