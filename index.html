@@ -86,7 +86,7 @@
 
   <!-- 1. GRUP: SOSYAL & VİDEO -->
   <div class="group">
-    <a id="firstLink" autofocus href="https://www.instagram.com/reels">Insta Reels</a>
+    <a id="firstLink" href="https://www.instagram.com/reels">Insta Reels</a>
     <a href="https://m.instagram.com/">Instagram</a>
     <a href="https://m.youtube.com/shorts">YT Shorts</a>
     <a href="https://m.youtube.com/">YouTube</a>
@@ -100,16 +100,16 @@
 
   <!-- 2. GRUP: YAPAY ZEKA & KİTAP/BİLGİ -->
   <div class="group">
-    <a href="https://www.google.com/m">Google</a>
-    <a href="https://gemini.google.com/app">Gemini</a>
-    <a href="https://chatgpt.com/">ChatGPT</a>
-    <a href="https://translate.google.com/m">Çeviri</a>
-    <a href="https://claude.ai/">Claude</a>
-    <a href="https://welib-public.org/">WeLib (ePub)</a>
-    <a href="https://tr.m.wikipedia.org/">Vikipedi</a>
-    <a href="https://annas-archive.org/">Anna Archive</a>
-    <a href="https://m.gutenberg.org/">Gutenberg</a>
-    <a href="https://tr.m.wikisource.org/">Vikikaynak</a>
+    <a href="https://www.google.com/m">1. Google</a>
+    <a href="https://gemini.google.com/app">2. Gemini</a>
+    <a href="https://chatgpt.com/">3. ChatGPT</a>
+    <a href="https://translate.google.com/m">4. Çeviri</a>
+    <a href="https://claude.ai/">5. Claude</a>
+    <a href="https://welib-public.org/">6. WeLib (ePub)</a>
+    <a href="https://tr.m.wikipedia.org/">7. Vikipedi</a>
+    <a href="https://annas-archive.org/">8. Anna Archive</a>
+    <a href="https://m.gutenberg.org/">9. Gutenberg</a>
+    <a href="https://tr.m.wikisource.org/">10. Vikikaynak</a>
   </div>
 
   <!-- 3. GRUP: RESMİ & HABER -->
@@ -127,10 +127,24 @@
   </div>
 
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    function resetFocus() {
+      window.scrollTo(0, 0);
       const first = document.getElementById('firstLink');
-      if (first) first.focus();
-    });
+      if (first) {
+        first.focus();
+      }
+    }
+
+    // İlk açılışta odaklan
+    window.addEventListener('DOMContentLoaded', resetFocus);
+    // Geri tuşuyla önbellekten dönüldüğünde odaklan
+    window.addEventListener('pageshow', resetFocus);
+    // Bulut tarayıcı gecikmeleri için kısa teyit
+    setTimeout(resetFocus, 50);
   </script>
 
 </body>
